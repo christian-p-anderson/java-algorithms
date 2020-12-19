@@ -3,6 +3,10 @@ package SearchAlgorithms;
 public class BinarySearch {
 
     /**
+     * Write a function that takes in a sorted array of ints as well as a target integer. The fn should use
+     * the binary search algo to determine if the target int is contained in the array and should return its
+     * index if it is, otherwise -1
+     *
      * Recursive Binary Search (if target is not found, return -1, but ask interviewer what
      * they would like to be returned)
      */
