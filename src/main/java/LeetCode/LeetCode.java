@@ -1,7 +1,8 @@
 package LeetCode;
 
-import java.util.ArrayList;
-import java.util.List;
+import Drills.Array;
+
+import java.util.*;
 
 public class LeetCode {
 
@@ -92,4 +93,59 @@ public class LeetCode {
         }
         return result;
     }
+
+    /**
+     * Majority Element
+     *
+     * Given an array nums of size n, return the majority element.
+     *
+     * The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+     *
+     *
+     *
+     * Example 1:
+     *
+     * Input: nums = [3,2,3]
+     * Output: 3
+     * Example 2:
+     *
+     * Input: nums = [2,2,1,1,1,2,2]
+     * Output: 2
+     */
+
+    public int majorityElement(int[] nums){
+        int majorityNum = 0;
+        int half = nums.length / 2;
+        Map<Integer, Integer> elementCount = new HashMap<Integer, Integer>();
+
+        if(nums.length == 1){
+            return nums[0];
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            //if the element is already in the map, increment the value by 1 (increase the count of appearances)
+            if(elementCount.containsKey(nums[i])){
+                elementCount.put(nums[i], 1 + elementCount.get(nums[i]));
+            } else{
+            // if the element is not already in the map, add it with a value of 1
+                elementCount.put(nums[i], 1);
+            }
+            //check if current element appears more than half the time, if so break from loop and return majority num
+            if(elementCount.get(nums[i]) > half){
+                majorityNum = nums[i];
+                break;
+            }
+        }
+        return  majorityNum;
+    }
+
+    /**
+     * ALTERNATE SOLUTION TO MAJORITY NUMS PROBLEM
+     */
+
+    public int majorityNumWithSort(int [] nums){
+        Arrays.sort(nums);
+        return nums[nums.length/2];
+    }
+
 }
