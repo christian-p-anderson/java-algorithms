@@ -155,6 +155,10 @@ public class LeetCode {
      * use all of the sub problems up until n to actually solve the problem. Start with a base case, determine the
      * answer of the base case, and then build on those base cases to solve the problem for n.
      *
+     * dp[i] = dp[i-1] + dp[i-2]
+     * We can decode the number at any given position in two ways, we can use it as just itself or as a pair with the
+     * previous index.
+     *
      A message containing letters from A-Z can be encoded into numbers using the following mapping:
 
      'A' -> "1"
@@ -228,12 +232,14 @@ public class LeetCode {
                     dp[i] += dp[i-2];
                 }
             }
-            //once we have filled our entire dp array up until the end, we only need to return the index of the lenght
+            //once we have filled our entire dp array up until the end, we only need to return the index of the length
             //of the input
             //the dp array stores the max num of ways to decode the string up until that index
             //it represents the num of ways to decode a string  of length "index"
             return dp[s.length()];
         }
+
+
 
 
 }
