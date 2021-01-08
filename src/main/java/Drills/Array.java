@@ -24,7 +24,8 @@ public class Array {
      * @return the last element in the array
      */
     public String getLastElement(String[] stringArray){
-        return stringArray[stringArray.length - 1];
+        String lastElement = stringArray[stringArray.length - 1];
+        return lastElement;
     }
 
     /**
