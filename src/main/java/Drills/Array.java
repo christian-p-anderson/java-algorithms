@@ -8,7 +8,8 @@ public class Array {
      * @return the first element in the array
      */
     public String getFirstElement(String[] array){
-        return array[0];
+        String firstElement = array[0];
+        return firstElement;
     }
 
     /**
