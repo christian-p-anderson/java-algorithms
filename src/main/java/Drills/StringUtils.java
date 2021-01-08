@@ -29,4 +29,28 @@ public class StringUtils {
        return reversedString;
     }
 
+    public String reverseAlt(String str) {
+        if(str == null || str.isEmpty()){
+            return str;
+        }
+
+        char[] characters = str.toCharArray();
+       Integer left = 0;
+       Integer right = str.length();
+
+       while(left <= right){
+           swap(characters, left, right);
+           right++;
+           left--;
+
+       }
+       return new String(characters);
+    }
+
+    public void swap(char[] array, Integer left, Integer right){
+        char temp = array[left];
+        array[left] = array[right];
+        array[right] = temp;
+    }
+
 }
