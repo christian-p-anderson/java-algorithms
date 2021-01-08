@@ -3,6 +3,9 @@ package Drills;
 public class Array {
 
     /**
+     * ////////////////////////////////////////////////////  STRING ARRAY UTILS /////////////////////////////////////////
+     */
+    /**
     *
     *@param array an array of String objects
      * @return the first element in the array
@@ -37,6 +40,24 @@ public class Array {
     public String getSecondToLastElement(String[] stringArray){
         String secondToLastElement = stringArray[stringArray.length - 2];
         return secondToLastElement;
+    }
+
+    /**
+         * ////////////////////////////////////////////////////     INTEGER ARRAY UTILS /////////////////////////////////////////
+     *
+     */
+
+    /**
+     * * @param intArray an array of integers
+     *      * @return the sum of `intArray`
+     */
+    public Integer getSum(Integer[] intArray){
+        Integer sum = 0;
+
+        for (Integer element:intArray) {
+            sum += element;
+        }
+        return sum;
     }
 
 }
