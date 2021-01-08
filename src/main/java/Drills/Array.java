@@ -16,7 +16,8 @@ public class Array {
      * @return the second element in the array
      */
     public String getSecondElement(String[] stringArray){
-        return stringArray[1];
+        String secondToLastElement = stringArray[1];
+        return secondToLastElement;
     }
 
     /**
