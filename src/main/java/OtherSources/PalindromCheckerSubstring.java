@@ -46,7 +46,7 @@ public class PalindromCheckerSubstring {
             }
 
         }
-
+    return counter;
     }
 
     public String reverse(String s){
