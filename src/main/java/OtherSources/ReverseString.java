@@ -1,3 +1,5 @@
+
+
 package OtherSources;
 
 public class ReverseString {
@@ -7,11 +9,11 @@ public class ReverseString {
      */
 
     public String reverseString(String string) {
-        StringBuilder reversedString = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder(string);
 
-        for (int i = string.length() - 1; i >= 0; i--) {
-            reversedString.append(string[i]);
-        }
-        return reversedString.toString();
+        StringBuilder reverseString = stringBuilder.reverse();
+
+        return reverseString.toString();
+
     }
 }
