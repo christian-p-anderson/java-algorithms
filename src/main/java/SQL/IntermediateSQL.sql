@@ -2,7 +2,7 @@
 -- called doj (date of join)
 -- After a few years your boss wants to know who the third most senior person is based on doj
 
-SELECT doj, GROUP_CONCAT(name SEPARATOR ', ') Employee_Names
+SELECT doj, GROUP_CONCAT(name SEPARATOR ', ') AS Employee_Names
 FROM employ
 GROUP BY doj
 LIMIT 1 OFFSET 2;
