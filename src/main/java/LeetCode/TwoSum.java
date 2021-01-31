@@ -12,7 +12,8 @@ public class TwoSum {
 
     /**
      *
-     * Instead of using brute force with 2 for loops we will use a one-pass hash table
+     * Instead of using brute force with 2 for loops we will use a one-pass hash table.
+     * Time complexity O(n)
      *
      */
 
